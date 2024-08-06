@@ -30,8 +30,11 @@ var in_floor : bool = false
 @export var move_direction : Vector3 = Vector3.ZERO
 
 func jump(power):
-	#apply_impulse(Vector3(0,power * mass,0))
 	linear_velocity.y = power
+
+func apply_movement_impulse(impulse: Vector3):
+	linear_velocity += impulse / mass
+	sliding_time = 1
 
 func move(delta):
 	
