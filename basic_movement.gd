@@ -31,11 +31,10 @@ var in_floor : bool = false
 
 func jump(power):
 	linear_velocity.y = power
-	sliding_time = 0.5
+	sliding_time = 0.2
 
-func apply_movement_impulse(impulse: Vector3):
-	linear_velocity += impulse / mass
-	sliding_time = 1
+func is_basic_movement():
+	pass
 
 func move(delta):
 	
