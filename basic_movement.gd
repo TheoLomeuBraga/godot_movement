@@ -31,6 +31,7 @@ var in_floor : bool = false
 
 func jump(power):
 	linear_velocity.y = power
+	sliding_time = 0.5
 
 func apply_movement_impulse(impulse: Vector3):
 	linear_velocity += impulse / mass
