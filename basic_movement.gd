@@ -5,12 +5,7 @@ class_name BasicMovement
 func _ready():
 	pass
 
-var mouse_movement = Vector2.ZERO
-func _input(event):
-	if event is InputEventMouseMotion:
-		mouse_movement = -event.relative * Global.mouse_sensitivity
-	else:
-		mouse_movement = Vector2.ZERO
+
 
 
 
@@ -35,6 +30,8 @@ func jump(power):
 
 func is_basic_movement():
 	pass
+
+
 
 func move(delta):
 	
@@ -86,4 +83,3 @@ func _physics_process(delta):
 	movement_plugin(delta)
 	
 	move(delta)
-
